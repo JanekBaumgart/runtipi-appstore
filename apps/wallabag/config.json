@@ -1,0 +1,66 @@
+{
+    "name": "Wallabag",
+    "available": true,
+    "port": 8555,
+    "exposable": true, 
+    "id": "wallabag", 
+    "description": "wallabag is a self hostable application for saving web pages. Unlike other services, wallabag is free (as in freedom) and open source. With this application you will not miss content anymore. Click, save, read it when you want. It saves the content you select so that you can read it when you have time.",
+    "tipi_version": 1, 
+    "version": "2.6.7", 
+    "categories": ["utilities"], 
+    "short_desc": "Wallabag: A self-hostable, open-source app for saving web pages with freedom, ensuring you never miss content—click, save, and read at your convenience.", 
+    "author": "wallabag",  
+    "source": "https://github.com/wallabag/wallabag", # Link for git repo
+    "website": "https://wallabag.org/", 
+    "form_fields": [
+        {
+            "type": "text",
+            "label": "Wallbag server name",
+            "max": 50,
+            "min": 3,
+            "required": true,
+            "env_variable": "SYMFONY__ENV__SERVER_NAME"
+        },
+        {
+            "type": "text",
+            "label": "Wallabag sender email address",
+            "max": 50,
+            "min": 3,
+            "required": true,
+            "env_variable": "SYMFONY__ENV__FROM_EMAIL"
+        },
+        {
+            "type": "fqdnip",
+            "label": "Wallabag domain name e.g. http://localhost",
+            "max": 50,
+            "min": 3,
+            "required": true,
+            "env_variable": "SYMFONY__ENV__DOMAIN_NAME"
+        },
+        {
+            "type": "text",
+            "label": "MAILER_DSN (e.g. 'smtp://127.0.0.1' or for gmail: 'gmail+smtp://USERNAME:APP-PASSWORD@default') visit https://myaccount.google.com/apppasswords to generate an app password for gmail",
+            "max": 130,
+            "min": 5,
+            "required": true,
+            "env_variable": "SYMFONY__ENV__MAILER_DSN"
+        },
+        {
+            "type": "random",
+            "label": "MySQL ROOT password",
+            "max": 50,
+            "min": 13,
+            "required": true,
+            "env_variable": "MYSQL_ROOT_PASSWORD"
+        },
+        {
+            "type": "random",
+            "label": "symphony-database-password",
+            "max": 50,
+            "min": 13,
+            "required": true,
+            "env_variable": "SYMFONY__ENV__DATABASE_PASSWORD"
+        },
+
+    ] 
+  }
